@@ -1,0 +1,48 @@
+$res_mobile : "only screen and (max-width: 800px)";
+$res_tablet : "only screen and (min-width: 801px) and (max-width: 1105px)";
+$res_pc : "only screen and (min-width: 1106px)";
+
+@mixin responsive_mobile() {
+    @media #{$res_mobile} {
+        @content;
+    }
+}
+
+@mixin responsive_tablet() {
+    @media #{$res_tablet} {
+        @content;
+    }
+}
+
+@mixin responsive_pc() {
+    @media #{$res_pc} {
+        @content;
+    }
+}
+
+.contain-card-intro {
+    min-height: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+@include responsive_pc {
+    .contain-card-intro {
+        width: 1150px;
+    }
+}
+
+@include responsive_tablet() {
+    .contain-card-intro {
+        width: 90%;
+    }
+}
+
+@include responsive_mobile() {
+    .contain-card-intro {
+        width: 90%;
+    }
+}

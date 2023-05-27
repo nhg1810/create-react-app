@@ -1,0 +1,109 @@
+$res_mobile : "only screen and (max-width: 800px)";
+$res_tablet : "only screen and (min-width: 801px) and (max-width: 1105px)";
+$res_pc : "only screen and (min-width: 1106px)";
+
+@mixin responsive_mobile() {
+    @media #{$res_mobile} {
+        @content;
+    }
+}
+
+@mixin responsive_tablet() {
+    @media #{$res_tablet} {
+        @content;
+    }
+}
+
+@mixin responsive_pc() {
+    @media #{$res_pc} {
+        @content;
+    }
+}
+
+@include responsive_pc() {
+    .wrapper {
+        width: 19%;
+    }
+}
+
+@include responsive_tablet() {
+    .wrapper {
+        width: 30%;
+    }
+}
+
+@include responsive_mobile() {
+    .wrapper {
+        width: 47%;
+    }
+}
+
+
+
+.wrapper {
+    transition: 0.2s ease-in-out;
+    padding: 2px;
+    box-shadow: 2px 2px 10px rgb(218, 216, 216);
+    margin-bottom: 10px;
+    margin-right: 2px;
+    margin-left: 2px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    .contain-image {
+        width: 90%;
+        height: 60%;
+        background-color: rgb(246, 246, 246);
+        border-radius: 10px;
+        position: relative;
+
+        img {
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            background-color: rgb(243, 200, 80);
+            padding-bottom: 2%;
+            border-radius: 10px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .tag-category {
+            position: absolute;
+            font-size: 12px;
+            right: 10px;
+            top: 2px;
+            color: rgb(105, 105, 105);
+            font-weight: 600;
+        }
+    }
+
+    .name-product {
+        color: rgb(161, 157, 157);
+    }
+
+    .name-product::first-letter {
+        font-size: 35px;
+        color: black;
+    }
+
+    .link-descript {
+        cursor: pointer;
+        font-weight: 600;
+        padding-bottom: 4px;
+        text-decoration: underline solid 2px black;
+        transition: 0.2s;
+    }
+
+    .link-descript:hover {
+        color: rgb(243, 200, 80);
+        text-decoration: solid 0px black;
+
+    }
+}

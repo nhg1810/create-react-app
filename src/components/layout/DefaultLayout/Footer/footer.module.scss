@@ -1,0 +1,141 @@
+$res_mobile : "only screen and (max-width: 800px)";
+$res_tablet : "only screen and (min-width: 801px) and (max-width: 1105px)";
+$res_pc : "only screen and (min-width: 1106px)";
+
+@mixin responsive_mobile() {
+    @media #{$res_mobile} {
+        @content;
+    }
+}
+
+@mixin responsive_tablet() {
+    @media #{$res_tablet} {
+        @content;
+    }
+}
+
+@mixin responsive_pc() {
+    @media #{$res_pc} {
+        @content;
+    }
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 300px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2px;
+}
+
+.inner {
+    width: 1150px;
+    min-height: 300px;
+    padding: 5px;
+    display: flex;
+}
+
+.default-row {
+    position: relative;
+    width: 300px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    .footer-logo {
+        width: 70px;
+        height: 70px;
+        border-radius: 10px;
+        background-color: rgb(243, 200, 80);
+    }
+
+    .item-contact {
+        width: 70%;
+        height: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        span {
+            width: auto;
+            height: 100%;
+            display: block;
+
+            a {
+                font-size: 25px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.footer-option {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .item-option {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 200px;
+        b{
+            display: block;
+            margin-left: 10px;
+        }
+    }
+
+    .contain-option {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        a {
+            padding: 10px;
+        }
+    }
+}
+
+@include responsive_pc {
+    .footer-option {
+        justify-content: space-evenly;
+        height: 300px;
+
+        .contain-option {
+            height: 80%;
+        }
+
+        .item-option {
+            height: 100%;
+        }
+    }
+}
+
+
+@include responsive_tablet {
+    .footer-option {
+        height: 600px;
+    }
+
+    .contain-option {
+        height: 50%;
+    }
+
+    .item-option {
+        height: fit-content;
+    }
+}
+
+@include responsive_mobile {
+    .inner {
+        flex-direction: column;
+    }
+    .item-option {
+       margin-top: 30px;
+    }
+}

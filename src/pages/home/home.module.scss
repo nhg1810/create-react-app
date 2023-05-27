@@ -1,0 +1,151 @@
+$res_mobile : "only screen and (max-width: 800px)";
+$res_tablet : "only screen and (min-width: 801px) and (max-width: 1105px)";
+$res_pc : "only screen and (min-width: 1106px)";
+
+@mixin responsive_mobile() {
+    @media #{$res_mobile} {
+        @content;
+    }
+}
+
+@mixin responsive_tablet() {
+    @media #{$res_tablet} {
+        @content;
+    }
+}
+
+@mixin responsive_pc() {
+    @media #{$res_pc} {
+        @content;
+    }
+}
+
+@include responsive_pc() {
+    .wrapper {
+        width: 1150px;
+    }
+
+    .container-card {
+        justify-content: flex-start;
+    }
+
+    .nav-item-option {
+        width: 300px;
+    }
+
+    .view-all {
+        width: 250px;
+    }
+}
+
+@include responsive_tablet() {
+    .wrapper {
+        width: 100%;
+    }
+
+    .container-card {
+        justify-content: flex-start;
+    }
+
+    .nav-item-option {
+        width: 300px;
+    }
+
+    .view-all {
+        width: 250px;
+    }
+}
+
+@include responsive_mobile() {
+    .wrapper {
+        width: 100%;
+    }
+
+    .container-card {
+        justify-content: space-around;
+    }
+
+    .nav-item-option {
+        width: 95%;
+        margin-top: 10px;
+        margin-left: 5px;
+    }
+    
+    .view-all {
+        width: 90%;
+    }
+}
+
+.wrapper {
+    margin: auto;
+    min-height: 400px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .nav-item-option {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 20px;
+
+        .item-option {
+            cursor: pointer;
+        }
+    }
+
+    .container-card {
+
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        min-height: 400px;
+        align-items: center;
+    }
+
+    .view-all {
+
+        cursor: pointer;
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        margin: auto;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: white;
+        font-weight: 500;
+        border-radius: 5px;
+        transition: 0.2s;
+    }
+
+    .view-all:hover {
+        background-color: rgb(112, 110, 110);
+        color: white;
+    }
+
+    .dot-item {
+        position: relative;
+    }
+
+
+    .dot-item::after {
+        position: absolute;
+        content: "";
+        width: 6px;
+        height: 6px;
+        background-color: red;
+        top: -4px;
+        right: -4px;
+        border-radius: 50%;
+    }
+
+    .premium {
+        color: rgb(255, 78, 0);
+    }
+
+    .free {
+        color: rgb(52, 129, 239);
+    }
+}
