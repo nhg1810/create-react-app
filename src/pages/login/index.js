@@ -11,7 +11,7 @@ const Login = () => {
     return (<div className={cx('wrapper')}>
         <span className={cx('title')}>START FOR FREE</span>
         <h1 className={cx('h1-title')}>Login</h1>
-        <span className={cx('ask')}>Have you have a account ?</span><Link>Sign Up</Link>
+        <span className={cx('ask')}>Have you have a account ?</span><Link to="/sign-up" className={cx("nav-item")}>Sign Up</Link>
         <div className={cx('feild-login')}>
             <TextField className={cx('item')}
                 required

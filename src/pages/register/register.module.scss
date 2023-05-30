@@ -1,0 +1,148 @@
+$res_mobile : "only screen and (max-width: 800px)";
+$res_tablet : "only screen and (min-width: 801px) and (max-width: 1105px)";
+$res_pc : "only screen and (min-width: 1106px)";
+
+@mixin responsive_mobile() {
+    @media #{$res_mobile} {
+        @content;
+    }
+}
+
+@mixin responsive_tablet() {
+    @media #{$res_tablet} {
+        @content;
+    }
+}
+
+@mixin responsive_pc() {
+    @media #{$res_pc} {
+        @content;
+    }
+}
+
+@include responsive_pc {
+
+    .wrapper {
+        width: 50%;
+    }
+
+    .contain-base {
+        width: 90%;
+
+        .item {
+            width: 200px;
+
+        }
+    }
+
+    .item-input {
+        width: 360px;
+    }
+}
+
+@include responsive_tablet() {
+    .wrapper {
+        width: 70%;
+    }
+
+    .contain-base {
+        width: 90%;
+
+        .item {
+            width: 200px;
+
+        }
+    }
+
+    .item-input {
+        width: 360px;
+    }
+}
+
+@include responsive_mobile() {
+    .wrapper {
+        width: 95%;
+    }
+
+    .contain-base {
+        width: 100%;
+
+        .item {
+            width: 50%;
+        }
+    }
+
+    .contain-else {
+        .item {
+            span {
+                display: none;
+            }
+
+            .item-input {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.wrapper {
+    position: absolute;
+    height: 70%;
+    background-color: rgb(253, 253, 253, 0.9);
+    box-shadow: 2px 1px 2px rgb(252, 253, 244);
+    border-radius: 10px;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+
+    .contain-base {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .item {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            justify-content: space-evenly;
+
+            span {
+                font-size: 12px;
+                color: rgb(63, 61, 61);
+            }
+        }
+    }
+
+    .contain-else {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+
+        .item {
+            width: 450px;
+            display: flex;
+            align-items: center;
+
+            span {
+                width: 70px;
+                font-size: 12px;
+                color: rgb(63, 61, 61);
+            }
+
+
+        }
+    }
+
+    .btn-sign-up {
+        margin-top: 20px;
+    }
+}

@@ -35,7 +35,7 @@ const Header = () => {
     }
     useEffect(() => {
         const navMobile = document.getElementById("option-tab");
-        hideNavMoble ? navMobile.style.left = '0px' : navMobile.style.left = '-100%'
+        hideNavMoble ? navMobile.style.left = '0px' : navMobile.style.left = '-200%'
     }, [hideNavMoble])
 
     return (<header className={cx('wrapper')}>
@@ -50,27 +50,27 @@ const Header = () => {
                 {/* any item in the first show */}
                 <div className={cx('contain-option')} id='option-tab'>
                     <span className={cx('item-option')}>
-                        <Link to="/" className={cx("nav-item")}>Giới thiệu</Link>
+                        <Link to="/" className={cx("nav-item")}>Introduction</Link>
                     </span>
                     <span className={cx('item-option')}>
-                        <Link to="/all-sources" className={cx("nav-item")}>Tất cả sources</Link>
+                        <Link to="/all-sources" className={cx("nav-item")}>All sources</Link>
                     </span>
                     <span className={cx('item-option')}>
-                        <a className={cx("nav-item")}>Dựng sources </a>
+                        <a className={cx("nav-item")}>Construct sources </a>
                     </span>
                     {/* more item in tag more */}
                     <span className={cx('item-more')}>
-                        <a className={cx("nav-item")}>Thêm</a>
+                        <a className={cx("nav-item")}>More</a>
                         <AiFillCaretDown />
                         <div className={cx('list-item-more')}>
                             <span className='nav-item-more'>
-                                <a>Cuộc đời It-er</a>
+                                <a>IT blog</a>
                             </span>
                             <span className='nav-item-more'>
-                                <a>Về tôi</a>
+                                <a>About me</a>
                             </span>
                             <span className='nav-item-more'>
-                                <a>Liên hệ</a>
+                                <a>Contact</a>
                             </span>
                         </div>
                     </span>
@@ -79,7 +79,7 @@ const Header = () => {
             </div>
             <div className={cx('inner-right')}>
                 <Link to="/login" className={cx("nav-item")}> <Button
-                    content="Đăng nhập"
+                    content="Login"
                     type="button"
                     border='rgb(221, 221, 221)'
                     width='100px'
@@ -91,21 +91,23 @@ const Header = () => {
 
                 </Button></Link>
 
+                <Link to="/sign-up" className={cx("nav-item")}>
+                    <Button
+                        marginLeft='10px'
+                        content="Sign Up"
+                        type="button"
+                        border='rgb(221, 221, 221)'
+                        width='100px'
+                        height='40px'
+                        borderRadius='5px'
+                        background='black'
+                        color='white'
+                    >
+                        <AiOutlineContacts />
 
-                <Button
-                    marginLeft='10px'
-                    content="Đăng kí"
-                    type="button"
-                    border='rgb(221, 221, 221)'
-                    width='100px'
-                    height='40px'
-                    borderRadius='5px'
-                    background='black'
-                    color='white'
-                >
-                    <AiOutlineContacts />
+                    </Button>
+                </Link>
 
-                </Button>
             </div>
         </div>
     </header>)
