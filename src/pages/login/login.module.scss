@@ -1,0 +1,101 @@
+$res_mobile : "only screen and (max-width: 800px)";
+$res_tablet : "only screen and (min-width: 801px) and (max-width: 1105px)";
+$res_pc : "only screen and (min-width: 1106px)";
+
+@mixin responsive_mobile() {
+    @media #{$res_mobile} {
+        @content;
+    }
+}
+
+@mixin responsive_tablet() {
+    @media #{$res_tablet} {
+        @content;
+    }
+}
+
+@mixin responsive_pc() {
+    @media #{$res_pc} {
+        @content;
+    }
+}
+
+@include responsive_pc {
+    .wrapper {
+        width: 30%;
+    }
+}
+
+@include responsive_tablet() {
+    .wrapper {
+        width: 70%;
+    }
+}
+
+@include responsive_mobile() {
+    .wrapper {
+        width: 95%;
+    }
+}
+
+.wrapper {
+
+    position: absolute;
+    height: 70%;
+    background-color: rgb(253, 253, 253, 0.9);
+    box-shadow: 2px 1px 2px rgb(252, 253, 244);
+    border-radius: 10px;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+
+    .title {
+        color: rgb(110, 110, 110);
+        font-size: 13px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .feild-login {
+        width: 50%;
+        height: auto;
+
+        .item {
+            width: 100%;
+            margin-left: 10px;
+            margin-top: 10px;
+            font-size: 17px;
+
+        }
+    }
+
+    .h1-title {
+        color: rgb(243, 196, 65)
+    }
+
+    .ask {
+        color: rgb(52, 129, 240);
+    }
+
+    .another-login {
+        width: 50%;
+        height: 50px;
+        margin-bottom: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .item-login {
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+
+        }
+    }
+}

@@ -3,7 +3,7 @@ import classNames from 'classnames/bind'
 import { AiFillCaretDown, AiOutlineAlignLeft, AiOutlineLogin, AiOutlineContacts } from 'react-icons/ai'
 import Button from '../../../Button';
 import { useEffect, useState } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 const cx = classNames.bind(styles);
 const Header = () => {
     const [hideTabMobile, setHideTabMobile] = useState(false)
@@ -39,8 +39,8 @@ const Header = () => {
     }, [hideNavMoble])
 
     return (<header className={cx('wrapper')}>
-       
-        {hideNavMoble ?  <div className={cx('layout')} onClick={clickToNavMobile}></div> : <></>}
+
+        {hideNavMoble ? <div className={cx('layout')} onClick={clickToNavMobile}></div> : <></>}
         <div className={cx('inner-wrapper')}>
             <div className={cx('inner-left')}>
                 {/* logo image */}
@@ -78,7 +78,7 @@ const Header = () => {
 
             </div>
             <div className={cx('inner-right')}>
-                <Button
+                <Link to="/login" className={cx("nav-item")}> <Button
                     content="Đăng nhập"
                     type="button"
                     border='rgb(221, 221, 221)'
@@ -89,7 +89,9 @@ const Header = () => {
                 >
                     <AiOutlineLogin />
 
-                </Button>
+                </Button></Link>
+
+
                 <Button
                     marginLeft='10px'
                     content="Đăng kí"

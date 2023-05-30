@@ -12,8 +12,6 @@ const Intro = () => {
             <CartContext />
             <CartContext />
             <CartContext />
-
-
         </div>
     </div>)
 }
