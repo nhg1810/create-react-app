@@ -183,6 +183,10 @@ $res_pc : "only screen and (min-width: 1106px)";
         flex-direction: column-reverse;
 
         .inner {
+            img {
+                display: none;
+            }
+
             width: 100%;
 
             .spotilne-linked {
