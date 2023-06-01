@@ -56,7 +56,7 @@ const Header = () => {
                         <Link to="/all-sources" className={cx("nav-item")}>All sources</Link>
                     </span>
                     <span className={cx('item-option')}>
-                        <a className={cx("nav-item")}>Construct sources </a>
+                        <Link to="/construct-source" className={cx("nav-item")}>Construct sources </Link>
                     </span>
                     {/* more item in tag more */}
                     <span className={cx('item-more')}>
