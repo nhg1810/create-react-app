@@ -64,7 +64,7 @@ const Header = () => {
                         <AiFillCaretDown />
                         <div className={cx('list-item-more')}>
                             <span className='nav-item-more'>
-                                <a>IT blog</a>
+                                <Link to="/blog" className={cx("nav-item")}>Blog IT</Link>
                             </span>
                             <span className='nav-item-more'>
                                 <a>About me</a>
