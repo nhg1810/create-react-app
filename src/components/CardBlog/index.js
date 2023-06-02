@@ -16,6 +16,7 @@ const CardBlog = () => {
                 </div>
 
             </div>
+            <span className={cx('btn-access')}>Đọc thêm</span>
         </div>
         <div className={cx('container-content')}>
             <span>UI review presentation</span>
