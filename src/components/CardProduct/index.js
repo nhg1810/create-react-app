@@ -5,7 +5,7 @@ const cx = classNames.bind(styles);
 const CardProduct = () => {
     return (<div className={cx('wrapper')}>
         <div className={cx('contain-image')}>
-            <img />
+            <img src="https://files.fullstack.edu.vn/f8-prod/courses/4/61a9e9e701506.png"/>
             <span className={cx('tag-category')}>Prenium</span>
         </div>
         <span className={cx('name-product')}>Php Construct Code</span>

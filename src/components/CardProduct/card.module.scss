@@ -67,11 +67,11 @@ $res_pc : "only screen and (min-width: 1106px)";
             width: 80%;
             height: 80%;
             background-color: rgb(243, 200, 80);
-            padding-bottom: 2%;
             border-radius: 10px;
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+            object-fit: cover;
         }
 
         .tag-category {
