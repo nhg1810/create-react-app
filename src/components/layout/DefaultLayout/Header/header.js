@@ -67,7 +67,8 @@ const Header = () => {
                                 <Link to="/blog" className={cx("nav-item")}>Blog IT</Link>
                             </span>
                             <span className='nav-item-more'>
-                                <a>About me</a>
+                                <Link to="/about" className={cx("nav-item")}>Về tôi</Link>
+
                             </span>
                             <span className='nav-item-more'>
                                 <Link to="/contact" className={cx("nav-item")}>Liên hệ</Link>

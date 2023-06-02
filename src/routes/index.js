@@ -5,6 +5,7 @@ import Login from "../pages/login"
 import LoginLayout from '../components/layout/LoginLayout'
 import Register from "../pages/register"
 import Blog from "../pages/blog"
+import About from "../pages/about"
 import Construct from "../pages/construct-source"
 import Contact from '../pages/contact'
 
@@ -18,7 +19,9 @@ const publicRoutes = [
     { path: '/login', component: Login, layout: LoginLayout },
     { path: '/sign-up', component: Register, layout: LoginLayout },
     { path: '/blog', component: Blog },
-    { path: '/contact', component: Contact}
+    { path: '/about', component: About },
+
+    { path: '/contact', component: Contact }
 
 ]
 const privateRoutes = []
