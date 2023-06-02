@@ -46,7 +46,7 @@ const Header = () => {
                 {/* logo image */}
                 {hideTabMobile ? <AiOutlineAlignLeft className={cx('btn-open-tab-mobile')} onClick={clickToNavMobile} /> : <></>}
 
-                <img className={cx('logo')}></img>
+                <img className={cx('logo')} src={require('./image/logo.png')}/>
                 {/* any item in the first show */}
                 <div className={cx('contain-option')} id='option-tab'>
                     <span className={cx('item-option')}>

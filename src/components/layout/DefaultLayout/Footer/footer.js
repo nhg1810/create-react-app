@@ -9,7 +9,7 @@ const Footer = () => {
     return (<footer className={cx('wrapper')}>
         <div className={cx('inner')}>
             <div className={cx('default-row')}>
-                <img className={cx('footer-logo')} />
+                <img className={cx('footer-logo')} src={require('./image/logo.png')} />
                 <h2>About company</h2>
                 <p>Dribbble is the world’s leading community for creatives to share, grow, and get hired.</p>
                 <div className={cx('item-contact')}>
