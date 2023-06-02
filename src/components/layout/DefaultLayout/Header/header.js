@@ -46,21 +46,21 @@ const Header = () => {
                 {/* logo image */}
                 {hideTabMobile ? <AiOutlineAlignLeft className={cx('btn-open-tab-mobile')} onClick={clickToNavMobile} /> : <></>}
 
-                <img className={cx('logo')} src={require('./image/logo.png')}/>
+                <img className={cx('logo')} src={require('./image/logo.png')} />
                 {/* any item in the first show */}
                 <div className={cx('contain-option')} id='option-tab'>
                     <span className={cx('item-option')}>
-                        <Link to="/" className={cx("nav-item")}>Introduction</Link>
+                        <Link to="/" className={cx("nav-item")}>Giới thiệu</Link>
                     </span>
                     <span className={cx('item-option')}>
-                        <Link to="/all-sources" className={cx("nav-item")}>All sources</Link>
+                        <Link to="/all-sources" className={cx("nav-item")}>Source</Link>
                     </span>
                     <span className={cx('item-option')}>
-                        <Link to="/construct-source" className={cx("nav-item")}>Construct sources </Link>
+                        <Link to="/construct-source" className={cx("nav-item")}>Cấu trúc source</Link>
                     </span>
                     {/* more item in tag more */}
                     <span className={cx('item-more')}>
-                        <a className={cx("nav-item")}>More</a>
+                        <a className={cx("nav-item")}>Thêm</a>
                         <AiFillCaretDown />
                         <div className={cx('list-item-more')}>
                             <span className='nav-item-more'>
@@ -70,7 +70,7 @@ const Header = () => {
                                 <a>About me</a>
                             </span>
                             <span className='nav-item-more'>
-                                <a>Contact</a>
+                                <Link to="/contact" className={cx("nav-item")}>Liên hệ</Link>
                             </span>
                         </div>
                     </span>
