@@ -8,6 +8,7 @@ import Blog from "../pages/blog"
 import About from "../pages/about"
 import Construct from "../pages/construct-source"
 import Contact from '../pages/contact'
+import DetailSource from'../pages/detail-source'
 
 
 
@@ -20,6 +21,7 @@ const publicRoutes = [
     { path: '/sign-up', component: Register, layout: LoginLayout },
     { path: '/blog', component: Blog },
     { path: '/about', component: About },
+    { path: '/detail-source', component: DetailSource },
 
     { path: '/contact', component: Contact }
 
