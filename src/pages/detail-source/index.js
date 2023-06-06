@@ -4,10 +4,14 @@ import { MdOutlineDone } from 'react-icons/md';
 import CardProduct from "../../components/CardProduct";
 import { AiFillDashboard } from "react-icons/ai";
 import { BiTimeFive } from "react-icons/bi";
+import { useEffect } from 'react';
 
 
 const cx = classNames.bind(styles)
 const DetailSource = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
     return (<div className={cx('wrapper')}>
         <div className={cx('inner-left')}>
             <h1>Kiến Thức Nhập Môn IT</h1>

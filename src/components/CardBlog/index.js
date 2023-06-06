@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './card-blog.module.scss'
 import classNames from 'classnames/bind';
 
@@ -16,10 +17,10 @@ const CardBlog = () => {
                 </div>
 
             </div>
-            <span className={cx('btn-access')}>Đọc thêm</span>
+            <span className={cx('btn-access')}><Link to='/detail-blog'>Đọc thêm</Link></span>
         </div>
         <div className={cx('container-content')}>
-            <span>UI review presentation</span>
+            <span><Link to='/detail-blog'>UI review presentation</Link></span>
             <p> The href attribute is required for an anchor to be keyboard accessible. Provide a valid, navigable address as the href value.</p>
             <u>Đọc thêm</u>
         </div>

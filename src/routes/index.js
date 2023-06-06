@@ -9,6 +9,10 @@ import About from "../pages/about"
 import Construct from "../pages/construct-source"
 import Contact from '../pages/contact'
 import DetailSource from'../pages/detail-source'
+import DetailConstructSource from'../pages/detail-construct-source'
+import DetailBlog from'../pages/detail-blog'
+
+
 
 
 
@@ -22,6 +26,9 @@ const publicRoutes = [
     { path: '/blog', component: Blog },
     { path: '/about', component: About },
     { path: '/detail-source', component: DetailSource },
+    { path: '/detail-construct-source', component: DetailConstructSource },
+    { path: '/detail-blog', component: DetailBlog },
+
 
     { path: '/contact', component: Contact }
 
